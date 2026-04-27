@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- This tells the browser what kind of document this is and sets the character encoding -->
+  <meta charset="UTF-8" />
+
+  <!-- This makes the page look good on phones and tablets too -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- The title shown in the browser tab -->
+  <title>Homework Chatbot 📚</title>
+
+  <!-- Link to our CSS file (controls how things look) -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ===== MAIN APP WRAPPER ===== -->
+  <!-- This div wraps everything in the chat app -->
+  <div class="app-wrapper">
+
+    <!-- ===== HEADER BAR ===== -->
+    <!-- Shows the bot name and online status, like iMessage -->
+    <div class="chat-header">
+      <div class="avatar">📚</div>
+      <div class="header-info">
+        <h1 class="bot-name">Study Buddy</h1>
+        <span class="status">● Online</span>
+      </div>
+    </div>
+
+    <!-- ===== MESSAGES AREA ===== -->
+    <!-- This is where all the chat bubbles appear.
+         id="messages" lets JavaScript find it easily. -->
+    <div class="messages-area" id="messages">
+      <!-- Messages will be added here by JavaScript -->
+    </div>
+
+    <!-- ===== INPUT AREA ===== -->
+    <!-- This is the bottom bar where the user types a message -->
+    <div class="input-area">
+
+      <!-- The text box where the user types -->
+      <!-- id="userInput" lets JavaScript grab what they typed -->
+      <input
+        type="text"
+        id="userInput"
+        placeholder="Type a message or add homework..."
+        autocomplete="off"
+      />
+
+      <!-- The send button -->
+      <!-- onclick="sendMessage()" calls our JavaScript function when clicked -->
+      <button class="send-btn" onclick="sendMessage()">
+        ➤
+      </button>
+
+    </div>
+
+  </div><!-- end .app-wrapper -->
+
+  <!-- Link to our JavaScript file (controls how things work) -->
+  <!-- Always put this at the END of the body so the HTML loads first -->
+  <script src="script.js"></script>
+
+</body>
+</html>
